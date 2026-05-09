@@ -15,25 +15,26 @@
 
     body {
       min-height: 100vh;
+
       font-family: 'Georgia', serif;
 
-      background-image:
-        linear-gradient(rgba(0, 0, 0, 0.45),
-          rgba(60, 0, 30, 0.60)),
-        url("imagem.jpeg");
+      background:
+        linear-gradient(135deg,
+          #12040b,
+          #2b0617);
 
-      background-size: contain;
-      background-position: center top;
-      background-repeat: no-repeat;
-      background-color: black;
+      background-attachment: fixed;
 
       display: flex;
       justify-content: center;
       align-items: center;
+
       text-align: center;
 
       color: white;
+
       padding: 20px;
+
       overflow-x: hidden;
     }
 
@@ -41,16 +42,17 @@
       width: 100%;
       max-width: 850px;
 
-      padding: 45px 30px;
+      padding: 30px 20px;
 
       border-radius: 30px;
 
-      background: rgba(255, 255, 255, 0.10);
+      background:
+        rgba(255, 255, 255, 0.08);
 
       backdrop-filter: blur(8px);
 
       box-shadow:
-        0 0 40px rgba(255, 120, 180, 0.30);
+        0 0 40px rgba(255, 120, 180, 0.25);
 
       animation: aparecer 1.8s ease;
     }
@@ -67,30 +69,65 @@
       }
     }
 
+    .foto-topo {
+      width: 100%;
+
+      display: flex;
+      justify-content: center;
+
+      margin-bottom: 30px;
+    }
+
+    .foto-topo img {
+      width: 100%;
+      max-width: 430px;
+
+      border-radius: 28px;
+
+      box-shadow:
+        0 0 35px rgba(255, 120, 180, 0.35);
+
+      border:
+        3px solid rgba(255, 255, 255, 0.15);
+    }
+
     h1 {
       font-size: 42px;
+
       margin-bottom: 15px;
+
       color: #ffd6e7;
-      text-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+
+      text-shadow:
+        0 0 15px rgba(255, 255, 255, 0.4);
     }
 
     h2 {
       font-size: 24px;
+
       margin-bottom: 35px;
+
       font-weight: normal;
-      color: #fff2f7;
+
+      color: #fff0f5;
     }
 
     .texto {
       font-size: 21px;
+
       line-height: 1.9;
+
       white-space: pre-line;
-      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
+
+      text-shadow:
+        0 2px 8px rgba(0, 0, 0, 0.7);
     }
 
     .destaque {
       color: #ffd1e4;
+
       font-weight: bold;
+
       font-size: 24px;
     }
 
@@ -100,15 +137,18 @@
       padding: 18px 35px;
 
       border: none;
+
       border-radius: 50px;
 
-      background: linear-gradient(135deg,
+      background:
+        linear-gradient(135deg,
           #ff6fa8,
           #ff3c78);
 
       color: white;
 
       font-size: 20px;
+
       font-weight: bold;
 
       cursor: pointer;
@@ -132,6 +172,7 @@
       margin-top: 30px;
 
       font-size: 23px;
+
       color: #ffd6e7;
 
       animation: aparecer 1s ease;
@@ -141,12 +182,15 @@
       margin-top: 35px;
 
       font-size: 28px;
+
       color: #ffd6e7;
+
       font-weight: bold;
     }
 
     .coracao {
       position: fixed;
+
       bottom: -20px;
 
       color: #ffb6d2;
@@ -170,20 +214,16 @@
 
     @media (max-width: 768px) {
 
-      body {
-        background-size: cover;
-      }
-
       .container {
-        padding: 35px 20px;
+        padding: 25px 18px;
       }
 
       h1 {
-        font-size: 32px;
+        font-size: 30px;
       }
 
       h2 {
-        font-size: 20px;
+        font-size: 19px;
       }
 
       .texto {
@@ -212,6 +252,10 @@
   <audio id="musica" src="musica.mp3"></audio>
 
   <div class="container">
+
+    <div class="foto-topo">
+      <img src="imagem.jpeg" alt="Nosso amor">
+    </div>
 
     <h1>Feliz Dia das Mães ❤️</h1>
 
@@ -285,10 +329,14 @@ em cada fase, em cada conquista, em cada sonho.
   </div>
 
   <script>
+
     function surpresa() {
 
-      const musica = document.getElementById("musica");
-      const mensagem = document.getElementById("mensagem");
+      const musica =
+        document.getElementById("musica");
+
+      const mensagem =
+        document.getElementById("mensagem");
 
       musica.play();
 
@@ -297,13 +345,15 @@ em cada fase, em cada conquista, em cada sonho.
 
     function criarCoracao() {
 
-      const coracao = document.createElement("div");
+      const coracao =
+        document.createElement("div");
 
       coracao.classList.add("coracao");
 
       coracao.innerHTML = "❤️";
 
-      coracao.style.left = Math.random() * 100 + "vw";
+      coracao.style.left =
+        Math.random() * 100 + "vw";
 
       coracao.style.fontSize =
         Math.random() * 20 + 18 + "px";
@@ -319,6 +369,7 @@ em cada fase, em cada conquista, em cada sonho.
     }
 
     setInterval(criarCoracao, 400);
+
   </script>
 
 </body>
